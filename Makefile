@@ -14,7 +14,8 @@ start_db:
 			-e PGDATA="/var/lib/postgresql/data/pgdata"\
 			-v ${PWD}/database:/var/lib/postgresql/data\
 			postgres
-
+build:
+	go build cmd/import.go -o bin/import
 migrate:
 	set -x
 	${MIGRATE_CMD} -path db/migration -database ${CONNECTION_STRING} -verbose up
