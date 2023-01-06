@@ -15,7 +15,11 @@ start_db:
 			-v ${PWD}/database:/var/lib/postgresql/data\
 			postgres
 build:
-	go build cmd/import.go -o bin/import
+	go build \
+	-o bin/import \
+	-v cmd/import.go
+dbshell:
+	psql -h 127.0.0.1 --user=${POSTGRES_USER} ${POSTGRES_DB}
 migrate:
 	set -x
 	${MIGRATE_CMD} -path db/migration -database ${CONNECTION_STRING} -verbose up
