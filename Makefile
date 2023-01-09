@@ -17,7 +17,10 @@ start_db:
 build:
 	go build \
 	-o bin/import \
-	-v cmd/import.go
+	-v cmd/import/main.go
+	go build \
+	-o bin/count_from_zim \
+	-v cmd/count_from_zim/main.go
 dbshell:
 	psql -h 127.0.0.1 --user=${POSTGRES_USER} ${POSTGRES_DB}
 migrate:

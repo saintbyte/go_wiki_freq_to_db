@@ -22,3 +22,6 @@
 6. ```make dbshell```
 7. Enjoy
 
+## 
+https://dumps.wikimedia.org/other/kiwix/zim/wikipedia/
+https://dumps.wikimedia.org/other/kiwix/zim/wikipedia/wikipedia_ru_top_nopic_2023-01.zim
